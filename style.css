@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #171426, #39304e);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    color: #e8bd69;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin-top: 12px;
+    color: #ccc;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.panel {
+    background: #242136;
+    border: 1px solid #c99e51;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px #0005;
+}
+
+h2 {
+    color: #e8bd69;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+button {
+    background: #d5a64e;
+    color: #171426;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 22px;
+    margin: 12px 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #f4d38b;
+}
+
+#answers {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.answer {
+    background: #39344e;
+    color: white;
+    border: 1px solid #777;
+    width: 100%;
+}
+
+.answer:hover {
+    background: #51466d;
+}
+
+.answer.correct {
+    background: #218653;
+    color: white;
+}
+
+.answer.wrong {
+    background: #a33345;
+    color: white;
+}
+
+.answer:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.progress {
+    background: #514b63;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #e8bd69;
+    transition: width .3s;
+}
+
+#godsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.god-item {
+    background: #39344e;
+    padding: 12px;
+    border-radius: 8px;
+    color: #bbb;
+}
+
+.god-item.unlocked {
+    color: #e8bd69;
+    border: 1px solid #e8bd69;
+}
+
+.god-item.completed {
+    color: #70e0a1;
+    border: 1px solid #70e0a1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#feedback {
+    font-weight: bold;
+}
+
+@media(max-width:500px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .panel {
+        padding: 20px 12px;
+    }
+
+    #godsList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

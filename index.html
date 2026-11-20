@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gods of Olympus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>GODS OF OLYMPUS</h1>
+    <p>Το απόλυτο παιχνίδι ελληνικής μυθολογίας</p>
+</header>
+
+<main class="container">
+
+    <section id="home" class="panel">
+        <h2>Καλώς ήρθες στον Όλυμπο!</h2>
+        <p>Απάντησε σωστά σε 5 ερωτήσεις για κάθε θεό.</p>
+        <p>Χρειάζεσαι 5/5 για να ξεκλειδώσεις τον επόμενο θεό!</p>
+        <button onclick="startGame()">Ξεκίνα το παιχνίδι</button>
+    </section>
+
+    <section id="game" class="panel hidden">
+        <h2 id="godName"></h2>
+        <p id="godDescription"></p>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <p id="questionNumber"></p>
+        <h3 id="question"></h3>
+
+        <div id="answers"></div>
+
+        <p id="feedback"></p>
+
+        <button id="nextButton" class="hidden" onclick="nextQuestion()">
+            Επόμενη
+        </button>
+
+        <button id="retryButton" class="hidden" onclick="retryGame()">
+            Επανάληψη
+        </button>
+    </section>
+
+    <section id="finish" class="panel hidden">
+        <h2>Συγχαρητήρια!</h2>
+        <p>Κατέκτησες και τους 12 Θεούς του Ολύμπου!</p>
+        <button onclick="resetGame()">Νέο παιχνίδι</button>
+    </section>
+
+    <section class="panel">
+        <h2>Οι 12 Θεοί</h2>
+        <div id="godsList"></div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
