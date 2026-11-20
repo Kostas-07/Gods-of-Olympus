@@ -1,163 +1,28 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #171426, #39304e);
-    color: white;
-    min-height: 100vh;
-}
-
-header {
-    text-align: center;
-    padding: 35px 15px;
-}
-
-header h1 {
-    color: #e8bd69;
-    font-size: 40px;
-    letter-spacing: 4px;
-}
-
-header p {
-    margin-top: 12px;
-    color: #ccc;
-}
-
-.container {
-    width: 90%;
-    max-width: 850px;
-    margin: auto;
-}
-
-.panel {
-    background: #242136;
-    border: 1px solid #c99e51;
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 25px;
-    text-align: center;
-    box-shadow: 0 5px 20px #0005;
-}
-
-h2 {
-    color: #e8bd69;
-    margin-bottom: 20px;
-}
-
-p {
-    margin: 15px 0;
-    line-height: 1.6;
-}
-
-button {
-    background: #d5a64e;
-    color: #171426;
-    border: none;
-    border-radius: 8px;
-    padding: 14px 22px;
-    margin: 12px 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #f4d38b;
-}
-
-#answers {
-    display: grid;
-    gap: 12px;
-    margin: 25px 0;
-}
-
-.answer {
-    background: #39344e;
-    color: white;
-    border: 1px solid #777;
-    width: 100%;
-}
-
-.answer:hover {
-    background: #51466d;
-}
-
-.answer.correct {
-    background: #218653;
-    color: white;
-}
-
-.answer.wrong {
-    background: #a33345;
-    color: white;
-}
-
-.answer:disabled {
-    opacity: 1;
-    cursor: default;
-}
-
-.progress {
-    background: #514b63;
-    height: 12px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px 0;
-}
-
-#progressBar {
-    height: 100%;
-    width: 0%;
-    background: #e8bd69;
-    transition: width .3s;
-}
-
-#godsList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.god-item {
-    background: #39344e;
-    padding: 12px;
-    border-radius: 8px;
-    color: #bbb;
-}
-
-.god-item.unlocked {
-    color: #e8bd69;
-    border: 1px solid #e8bd69;
-}
-
-.god-item.completed {
-    color: #70e0a1;
-    border: 1px solid #70e0a1;
-}
-
-.hidden {
-    display: none !important;
-}
-
-#feedback {
-    font-weight: bold;
-}
-
-@media(max-width:500px) {
-    header h1 {
-        font-size: 27px;
-    }
-
-    .panel {
-        padding: 20px 12px;
-    }
-
-    #godsList {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+* { box-sizing: border-box; }
+:root { font-family: Arial, Helvetica, sans-serif; color: #f7f2e8; background: #111827; }
+body { margin: 0; min-height: 100vh; padding: 32px 16px; background: radial-gradient(circle at top, #34405c, #111827 60%); }
+.container { width: min(760px, 100%); margin: 0 auto; }
+header { text-align: center; margin: 12px 0 28px; }
+.eyebrow { color: #f6c96b; text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: bold; }
+h1 { font-size: clamp(30px, 6vw, 48px); margin: 8px 0; color: #f6c96b; }
+.intro, .muted { color: #cbd5e1; line-height: 1.6; }
+.panel { background: rgba(20, 28, 45, .94); border: 1px solid #56627a; border-radius: 18px; padding: clamp(20px, 5vw, 34px); box-shadow: 0 18px 50px #0005; }
+.topline { display: flex; justify-content: space-between; gap: 12px; color: #f6c96b; font-weight: bold; font-size: 14px; }
+.progress { height: 9px; background: #354158; border-radius: 20px; overflow: hidden; margin: 14px 0 26px; }
+#progressBar { height: 100%; width: 0; background: #e7ad45; transition: width .25s; }
+h2 { color: #f6c96b; margin-bottom: 6px; }
+h3 { line-height: 1.45; margin-top: 26px; }
+.answers { display: grid; gap: 11px; margin: 18px 0; }
+.answer { text-align: left; border: 1px solid #64748b; background: #202c43; color: #fff; padding: 14px 16px; border-radius: 10px; cursor: pointer; font-size: 16px; }
+.answer:hover:not(:disabled) { border-color: #f6c96b; background: #2d3b55; }
+.answer:disabled { cursor: default; opacity: .85; }
+.answer.correct { background: #14532d; border-color: #4ade80; }
+.answer.wrong { background: #7f1d1d; border-color: #f87171; }
+.feedback { min-height: 25px; font-weight: bold; }
+.primary, .secondary { border: 0; border-radius: 10px; padding: 13px 20px; font-size: 16px; font-weight: bold; cursor: pointer; }
+.primary { background: #e7ad45; color: #1b2434; }
+.primary:disabled { opacity: .4; cursor: not-allowed; }
+.secondary { background: #475569; color: white; }
+.hidden { display: none; }
+footer { text-align: center; color: #94a3b8; margin: 24px; }
+@media (max-width: 480px) { body { padding: 18px 12px; } .topline { font-size: 12px; } }
